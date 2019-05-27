@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
+## Entorno
+
+Copiamos variables para el entorno local.
+
+`cp src/environments/environment.local.ts src/environments/environment.ts`  
+
 ## Desarrollo
 
 `npm run start` la aplicación estará disponible en `http://localhost:4200`.
