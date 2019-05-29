@@ -2,10 +2,7 @@ version: "3"
 
 services:
   nginx_angular_base:
-    build:
-      context: .
+    image: registry.cnrt.gob.ar/angular/base:1.0.0
     restart: unless-stopped
     ports:
     - 8002:80
-    volumes:
-    - ./../dist/AngularBase:/usr/share/nginx/html

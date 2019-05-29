@@ -1,6 +1,7 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Pais} from './models';
 import {PaisService} from './services';
+import {environment} from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,11 @@ import {PaisService} from './services';
 })
 export class AppComponent implements OnInit {
   title = 'Angular Base';
+  entorno = environment.entorno;
 
   @Input() public paises: Array<Pais> = [];
 
-  constructor(
-    private _paisService: PaisService,
-  ) {
+  constructor(private _paisService: PaisService) {
   }
 
   ngOnInit() {

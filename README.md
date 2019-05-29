@@ -18,7 +18,17 @@ Copiamos variables para el entorno local.
 
 ## Docker
 
-Luego de crear el build ejecutar
+Crear imagen con tag (ej: 1.0.0) y para 
+un environment (local, dev, pre o prod)
+
+Por defecto el environment es 'local' 
+```
+docker build --build-arg environment=local \
+  -t registry.cnrt.gob.ar/angular/base:1.0.0 \
+  -f docker/Dockerfile .
+```
+
+Luego de crear la imagen ejecutar
 ```
 docker-compose -f docker/docker-compose.yml stop
 docker-compose -f docker/docker-compose.yml up -d
